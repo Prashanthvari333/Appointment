@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
-const Login = () => {
+const Login = ({navigation}) => {
   const [emailOrUsername, setEmailOrUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,6 +17,7 @@ const Login = () => {
       // Handle login failure
       alert('Please enter valid credentials');
     }
+    navigation.navigate('DoctorList');
   };
 
   return (
